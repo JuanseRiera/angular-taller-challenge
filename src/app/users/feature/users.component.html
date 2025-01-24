@@ -1,0 +1,37 @@
+<h1>Users</h1>
+
+<div class="users__filter">
+    <app-debounced-input placeholder="Search users by name" [debounceTime]="1000" [disable]="!isLoading()" (debouncedText)="setSearchedName($event)" />
+</div>
+@if (users$ | async; as users) {
+    @if(isLoading()) {
+        <ng-container [ngTemplateOutlet]="loadingUsers"> </ng-container>
+    } @else if (users.length === 0) {
+        <p>No users with name {{searchedName$ | async}} were found.</p>
+    } @else {
+        <div class="card__wrapper">
+            @for (user of users; track user.id) {
+                <div class="user__card">
+                    <app-user [user]="user" />
+                </div>
+            }
+        </div>
+    }
+    
+} @else {
+    <ng-container [ngTemplateOutlet]="loadingUsers"> </ng-container>
+}
+
+<ng-template #loadingUsers>
+    <div class="card__wrapper">
+        <div class="user__card">
+            <app-card-skeleton />
+        </div>
+        <div class="user__card">
+            <app-card-skeleton />
+        </div>
+        <div class="user__card">
+            <app-card-skeleton />
+        </div>
+    </div>
+</ng-template>

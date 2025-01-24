@@ -1,0 +1,17 @@
+.card__wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.users__filter {
+    margin-bottom: 2rem;
+}
+
+.user__card {
+    flex: 1 1 250px;
+    min-width: 250px;
+    max-width: 30rem;
+}

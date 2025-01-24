@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  padding: 3rem;
+  margin: 0;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}

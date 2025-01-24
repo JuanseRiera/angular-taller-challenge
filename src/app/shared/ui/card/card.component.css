@@ -1,0 +1,24 @@
+.card {
+  width: 100%;
+  min-height: 250px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #000;
+  box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
+    rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.card-content {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
